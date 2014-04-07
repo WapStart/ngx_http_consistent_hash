@@ -188,7 +188,7 @@ ngx_http_upstream_init_consistent_hash(ngx_conf_t *cf,
 
                 continuum->nodes[continuum->nnodes].point =
                     ngx_http_upstream_consistent_hash_node_point(hash_data, 
-                            (last - hash_data));
+                            (last - hash_data) + 1);
 
                 continuum->nodes[continuum->nnodes].rr_peer = rr_peer;
                 continuum->nnodes++;
